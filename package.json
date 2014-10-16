@@ -1,0 +1,55 @@
+{
+  "name": "NODE_LIBRARY_NAME",
+  "description": "Description",
+  "version": "0.0.0",
+  "author": "COMPANY_NAME <email@company.com> (https://www.company.com/)",
+  "homepage": "https://github.com/COMPANY_NAME/REPO_NAME",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/COMPANY_NAME/REPO_NAME.git"
+  },
+  "bugs": {
+    "url": "https://github.com/COMPANY_NAME/REPO_NAME/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://COMPANY_NAME.mit-license.org/"
+    }
+  ],
+  "keywords": [
+    "firebase",
+    "realtime"
+  ],
+  "main": "dist/LIBRARY_NAME.min.js",
+  "files": [
+    "dist/**",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "dependencies": {
+    "firebase": "1.1.x"
+  },
+  "devDependencies": {
+    "gulp": "^3.5.6",
+    "gulp-concat": "^2.2.0",
+    "gulp-ext-replace": "0.0.5",
+    "gulp-jshint": "^1.5.1",
+    "gulp-karma": "0.0.4",
+    "gulp-uglify": "^0.2.1",
+    "jshint-stylish": "^0.2.0",
+    "streamqueue": "0.0.5",
+    "coveralls": "^2.11.1",
+    "karma": "^0.12.9",
+    "karma-coverage": "^0.2.4",
+    "karma-failed-reporter": "0.0.2",
+    "karma-jasmine": "~0.2.0",
+    "karma-phantomjs-launcher": "~0.1.4",
+    "karma-spec-reporter": "0.0.13"
+  },
+  "scripts": {
+    "test": "gulp test",
+    "travis": "gulp --travis"
+  }
+}

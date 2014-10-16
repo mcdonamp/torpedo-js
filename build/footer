@@ -1,0 +1,9 @@
+  // STEP 1: Change this to the name of the global object
+  return LIBRARY_NAME;
+})();
+
+// STEP 2: Rename the node module export name
+// Export LIBRARY_NAME if this is being run in node
+if (typeof module !== "undefined" && typeof process !== "undefined") {
+  module.exports = LIBRARY_NAME;
+}

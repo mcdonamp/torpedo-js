@@ -1,0 +1,37 @@
+{
+  "name": "BOWER_LIBRARY_NAME",
+  "description": "description",
+  "version": "0.0.0",
+  "authors": [
+    "COMPANY_NAME <email@company.com> (https://www.company.com/)"
+  ],
+  "homepage": "https://github.com/COMPANY_NAME/REPO_NAME/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/firebase/COMPANY_NAME/REPO_NAME"
+  },
+  "license": "MIT",
+  "keywords": [
+    "firebase",
+    "realtime"
+  ],
+  "main": "dist/LIBRARY_NAME.min.js",
+  "ignore": [
+    "**/.*",
+    "src",
+    "build",
+    "tests",
+    "node_modules",
+    "bower_components",
+    "firebase.json",
+    "package.json",
+    "gulpfile.js",
+    "changelog.txt"
+  ],
+  "dependencies": {
+    "firebase": "1.1.x"
+  },
+  "devDependencies": {
+    "jasmine": "~2.0.0"
+  }
+}
