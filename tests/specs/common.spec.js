@@ -4,15 +4,14 @@
 // Override the default timeout interval for Jasmine
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 5000;
 
-// STEP 1: Change this to reference a Firebase you have access to, ideally your demo or test environment
 // Get a reference to a random demo Firebase
 var demoFirebaseUrl = "https://torpedo-test.firebaseio.com/";
 
-// STEP 2: Add additional valid and invalid parameter lists
 // Define examples of valid and invalid parameters
 var invalidFirebaseRefs = [null, undefined, NaN, true, false, [], 0, 5, "", "a", ["hi", 1]];
+var validChannels = [12345, "12345"];
+var invalidChannels = [null, undefined, NaN, true, false, [], ".", "", "", "", ""];
 
-// STEP 3: Update global references to any variables you need access to
 // Create global variables to hold the Firebase and LIBRARY_NAME variables
 var firebaseRef, torpedo;
 
