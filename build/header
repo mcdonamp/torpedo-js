@@ -7,9 +7,9 @@
  */
 
 // Include any node modules that need to be included
-if (typeof module !== "undefined" && typeof process !== "undefined") {
-  //var RSVP = require("rsvp");
-}
+// if (typeof module !== "undefined" && typeof process !== "undefined") {
+//   var RSVP = require("rsvp");
+// }
 
 var Torpedo = (function() {
   "use strict";

@@ -7,9 +7,9 @@
  */
 
 // Include any node modules that need to be included
-if (typeof module !== "undefined" && typeof process !== "undefined") {
-  var RSVP = require("rsvp");
-}
+// if (typeof module !== "undefined" && typeof process !== "undefined") {
+//   var RSVP = require("rsvp");
+// }
 
 var Torpedo = (function() {
   "use strict";
@@ -50,7 +50,6 @@ var Torpedo = function(firebaseRef) {
   /************************/
 
   var _firebaseRef = firebaseRef;
-  console.log('Creating new Torpedo ref');
 };
 
   return Torpedo;
