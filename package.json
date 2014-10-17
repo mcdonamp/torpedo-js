@@ -1,27 +1,30 @@
 {
-  "name": "NODE_LIBRARY_NAME",
+  "name": "Torpedo",
   "description": "Description",
   "version": "0.0.0",
-  "author": "COMPANY_NAME <email@company.com> (https://www.company.com/)",
-  "homepage": "https://github.com/COMPANY_NAME/REPO_NAME",
+  "author": "Firebase <support@firebase.com> (https://www.firebase.com/)",
+  "homepage": "https://github.com/mcdonamp/torpedo",
   "repository": {
     "type": "git",
-    "url": "https://github.com/COMPANY_NAME/REPO_NAME.git"
+    "url": "https://github.com/mcdonamp/torpedo.git"
   },
   "bugs": {
-    "url": "https://github.com/COMPANY_NAME/REPO_NAME/issues"
+    "url": "https://github.com/mcdonamp/torpedo/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://COMPANY_NAME.mit-license.org/"
+      "url": "http://firebase.mit-license.org/"
     }
   ],
   "keywords": [
     "firebase",
-    "realtime"
+    "realtime",
+    "pub/sub",
+    "torpedo",
+    "messaging"
   ],
-  "main": "dist/LIBRARY_NAME.min.js",
+  "main": "dist/Torpedo.min.js",
   "files": [
     "dist/**",
     "LICENSE",
@@ -29,7 +32,8 @@
     "package.json"
   ],
   "dependencies": {
-    "firebase": "1.1.x"
+    "firebase": "1.1.x",
+    "rsvp": "~3.0.13"
   },
   "devDependencies": {
     "gulp": "^3.5.6",

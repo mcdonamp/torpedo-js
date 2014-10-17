@@ -1,21 +1,24 @@
 {
-  "name": "BOWER_LIBRARY_NAME",
+  "name": "Torpedo",
   "description": "description",
   "version": "0.0.0",
   "authors": [
-    "COMPANY_NAME <email@company.com> (https://www.company.com/)"
+    "Firebase <support@firebase.com> (https://www.firebase.com/)"
   ],
-  "homepage": "https://github.com/COMPANY_NAME/REPO_NAME/",
+  "homepage": "https://github.com/mcdonamp/torpedo-js/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/firebase/COMPANY_NAME/REPO_NAME"
+    "url": "https://github.com/mcdonamp/torpedo-js"
   },
   "license": "MIT",
   "keywords": [
     "firebase",
-    "realtime"
+    "realtime",
+    "pub/sub",
+    "torpedo",
+    "messaging"
   ],
-  "main": "dist/LIBRARY_NAME.min.js",
+  "main": "dist/Torpedo.min.js",
   "ignore": [
     "**/.*",
     "src",
@@ -29,7 +32,8 @@
     "changelog.txt"
   ],
   "dependencies": {
-    "firebase": "1.1.x"
+    "firebase": "1.1.x",
+    "rsvp": "~3.0.13"
   },
   "devDependencies": {
     "jasmine": "~2.0.0"

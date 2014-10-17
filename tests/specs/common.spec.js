@@ -6,7 +6,7 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 5000;
 
 // STEP 1: Change this to reference a Firebase you have access to, ideally your demo or test environment
 // Get a reference to a random demo Firebase
-var demoFirebaseUrl = "https://<your-firebase>.firebaseio.com";
+var demoFirebaseUrl = "https://iostemplate.firebaseio-demo.com/";
 
 // STEP 2: Add additional valid and invalid parameter lists
 // Define examples of valid and invalid parameters
@@ -14,7 +14,7 @@ var invalidFirebaseRefs = [null, undefined, NaN, true, false, [], 0, 5, "", "a",
 
 // STEP 3: Update global references to any variables you need access to
 // Create global variables to hold the Firebase and LIBRARY_NAME variables
-var firebaseRef, libraryName;
+var firebaseRef, torpedo;
 
 /**********************/
 /*  HELPER FUNCTIONS  */
@@ -23,17 +23,18 @@ var firebaseRef, libraryName;
 // STEP 4: Update beforeEachHelper to set up each test
 /* Helper function which runs before each Jasmine test has started */
 function beforeEachHelper(done) {
+  console.log('Helper!!!');
   // Create a new firebase ref with a new context
-  firebaseRef = new Firebase(demoFirebaseUrl, Firebase.Context());
+  firebaseRef = new Firebase(demoFirebaseUrl);
 
   // Reset the Firebase
   firebaseRef.remove(function() {
     // Create a new firebase ref at a random node
     firebaseRef = firebaseRef.child(generateRandomString());
+    // Create a new instance of Torpedo
+    // torpedo = new Torpedo(firebaseRef);
 
-    // Create a new instance of LIBRARY_NAME
-    libraryName = new LIBRARY_NAME(firebaseRef);
-
+    console.log("done!");
     done();
   });
 }
@@ -84,7 +85,7 @@ function Checklist(items, expect, done) {
   this.isEmpty = function() {
     return (this.length() === 0);
   };
-};
+}
 
 /* Common error handler for use in .catch() statements of promises. This will
  * cause the test to fail, outputting the details of the exception. Otherwise, tests

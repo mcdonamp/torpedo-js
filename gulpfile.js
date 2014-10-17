@@ -32,9 +32,8 @@ var paths = {
     dest: {
       dir: "dist",
       files: {
-        //STEP 1: Change file names to appropriate output names
-        unminified: "LIBRARY_NAME.js",
-        minified: "LIBRARY_NAME.min.js"
+        unminified: "Torpedo.js",
+        minified: "Torpedo.min.js"
       }
     }
   },
@@ -42,8 +41,8 @@ var paths = {
   tests: {
     config: "tests/karma.conf.js",
     files: [
-      //STEP 2: Add in other source files necessary to test
       "bower_components/firebase/firebase.js",
+      "bower_components/rsvp/rsvp.min.js",
       "src/*.js",
       "tests/specs/*.spec.js"
     ]
@@ -89,7 +88,7 @@ gulp.task("scripts", function() {
     .pipe(concat(paths.scripts.dest.files.minified))
 
     // Write minified version to the distribution directory
-    .pipe(gulp.dest(paths.scripts.dest.dir))
+    .pipe(gulp.dest(paths.scripts.dest.dir));
 });
 
 /* Uses the Karma test runner to run the Jasmine tests */

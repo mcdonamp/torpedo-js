@@ -1,18 +1,15 @@
-// STEP 1: Change header comment appropriately
 /*!
- * LIBRARY_NAME description
+ * Torpedo is a pub/sub implementation built on top of Firebase
  *
- * LIBRARY_NAME v 0.0.0
- * https://github.com/COMPANY_NAME/REPO_NAME
+ * Torpedo v 0.0.0
+ * https://github.com/mcdonamp/torpedo-js
  * License: MIT
  */
 
 // Include any node modules that need to be included
 if (typeof module !== "undefined" && typeof process !== "undefined") {
-  //STEP 2: Add in all required node packages
-  // var example = require("example");
+  var RSVP = require("rsvp");
 }
 
-//STEP 3: Change LIBRARY_NAME to whatever you want the globally scoped object to be named
-var LIBRARY_NAME = (function() {
+var Torpedo = (function() {
   "use strict";
