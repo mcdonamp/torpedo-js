@@ -1,11 +1,6 @@
 {
   "predef": [
-    "module",
-    "require",
-    "setTimeout",
-    "setInterval",
-    "clearTimeout",
-    "clearInterval"
+    "Firebase"
   ],
   "bitwise": true,
   "curly": true,
@@ -20,5 +15,6 @@
   "strict": true,
   "trailing": true,
   "undef": true,
-  "unused": true
+  "unused": true,
+  "node": true
 }
