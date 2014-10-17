@@ -10,7 +10,7 @@ var demoFirebaseUrl = "https://torpedo-test.firebaseio.com/";
 // Define examples of valid and invalid parameters
 var invalidFirebaseRefs = [null, undefined, NaN, true, false, [], 0, 5, "", "a", ["hi", 1]];
 var validChannels = [12345, "12345"];
-var invalidChannels = [null, undefined, NaN, true, false, [], ".", "", "", "", ""];
+var invalidChannels = [null, undefined, NaN, true, false, [], ".", "[", "]", "#", "$", "\/"];
 
 // Create global variables to hold the Firebase and LIBRARY_NAME variables
 var firebaseRef, torpedo;
@@ -39,6 +39,8 @@ function beforeEachHelper(done) {
 // STEP 5: Update afterEachHelper to clean up after each test
 /* Helper function which runs after each Jasmine test has completed */
 function afterEachHelper(done) {
+  firebaseRef = null;
+  torpedo = null;
   done();
 }
 
