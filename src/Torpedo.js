@@ -20,8 +20,25 @@ var Torpedo = function(firebaseRef) {
   };
 
   /**
+   * Auths a user to their Torpedo and Firebase instance.
+   * @param {string} token Token used to validate Torpedo and Firebase instance.
+   * @return {(Object|Error)} Returns the user object if authentication was valid or an error if authentication was invalid
+   */
+  this.auth = function(token) {
+    return new RSVP.Promise(function(resolve, reject){
+      _firebaseRef.authWithCustomToken(token, function(error, authData) {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(authData);
+        }
+      });
+    });
+  };
+
+  /**
    * Publishes a message to a given channel.
-   * @param {object} options An object containing the channel(s) to write to and the message to write to that channel.
+   * @param {!Object} options An object containing the channel(s) to write to and the message to write to that channel.
    * @return {Promise} promise A promise containing the data written if successful or an error message if unsuccessful.
    */
   this.publish = function(options) {

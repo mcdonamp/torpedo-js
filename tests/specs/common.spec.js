@@ -11,6 +11,8 @@ var demoFirebaseUrl = "https://torpedo-test.firebaseio.com/";
 var invalidFirebaseRefs = [null, undefined, NaN, true, false, [], 0, 5, "", "a", ["hi", 1]];
 var validChannels = [12345, "12345"];
 var invalidChannels = [null, undefined, NaN, true, false, [], ".", "[", "]", "#", "$", "\/"];
+var validToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6IjEyMzQ1IiwidGVzdCI6dHJ1ZX0sImlhdCI6MTQxMzU3NDIzOX0.jDGWU4-pS93PvCYfthutaq--1l_jeKapSlJts4X14MQ"; //Test token, NOT Firebase secret
+var invalidToken = "thisisnotavalidtokennoreallyitisnt";
 
 // Create global variables to hold the Firebase and LIBRARY_NAME variables
 var firebaseRef, torpedo;

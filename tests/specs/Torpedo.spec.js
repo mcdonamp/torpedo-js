@@ -26,6 +26,24 @@ describe("Torpedo Tests:", function() {
     });
   });
 
+  describe("auth():", function() {
+    it("auth() authenticates with a valid token", function(done) {
+      var cl = new Checklist(["p1"], expect, done);
+
+      torpedo.auth(validToken).then(function() {
+        cl.x("p1");
+      });
+    });
+
+    it("auth() doesn't authenticate with an invalid token", function(done) {
+      var cl = new Checklist(["p1"], expect, done);
+
+      torpedo.auth(invalidToken).catch(function() {
+        cl.x("p1");
+      });
+    });
+  });
+
   describe("publish():", function() {
     it("publish() returns a promise", function(done) {
       var cl = new Checklist(["p1"], expect, done);
