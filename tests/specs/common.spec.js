@@ -6,7 +6,7 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 5000;
 
 // STEP 1: Change this to reference a Firebase you have access to, ideally your demo or test environment
 // Get a reference to a random demo Firebase
-var demoFirebaseUrl = "https://iostemplate.firebaseio-demo.com/";
+var demoFirebaseUrl = "https://torpedo-test.firebaseio.com/";
 
 // STEP 2: Add additional valid and invalid parameter lists
 // Define examples of valid and invalid parameters
@@ -23,7 +23,6 @@ var firebaseRef, torpedo;
 // STEP 4: Update beforeEachHelper to set up each test
 /* Helper function which runs before each Jasmine test has started */
 function beforeEachHelper(done) {
-  console.log('Helper!!!');
   // Create a new firebase ref with a new context
   firebaseRef = new Firebase(demoFirebaseUrl);
 
@@ -32,9 +31,8 @@ function beforeEachHelper(done) {
     // Create a new firebase ref at a random node
     firebaseRef = firebaseRef.child(generateRandomString());
     // Create a new instance of Torpedo
-    // torpedo = new Torpedo(firebaseRef);
+    torpedo = new Torpedo(firebaseRef);
 
-    console.log("done!");
     done();
   });
 }

@@ -19,4 +19,12 @@ describe("Torpedo Tests:", function() {
       expect(function() { new Torpedo(firebaseRef); }).not.toThrow();
     });
   });
+
+  describe("ref():", function() {
+    it("ref() returns the Firebase reference used to create a GeoFire instance", function() {
+      expect(torpedo.ref()).toBe(firebaseRef);
+    });
+  });
+
+
 });
