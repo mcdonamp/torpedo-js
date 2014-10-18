@@ -41,6 +41,7 @@ function beforeEachHelper(done) {
 // STEP 5: Update afterEachHelper to clean up after each test
 /* Helper function which runs after each Jasmine test has completed */
 function afterEachHelper(done) {
+  firebaseRef.unauth();
   firebaseRef = null;
   torpedo = null;
   done();
