@@ -94,8 +94,7 @@ gulp.task("scripts", function() {
 
 /* Uses the Karma test runner to run the Jasmine tests */
 gulp.task("test", function() {
-  var configFile = paths.tests.config;
-  if (travis) configFile = paths.tests.travisConfig;
+  var configFile = travis ? paths.tests.travisConfig : paths.tests.config;
   return gulp.src(paths.tests.files)
     .pipe(karma({
       configFile: configFile,
