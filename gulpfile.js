@@ -40,6 +40,7 @@ var paths = {
 
   tests: {
     config: "tests/karma.conf.js",
+    travisConfig: "tests/karma.travis.conf.js",
     files: [
       "bower_components/firebase/firebase.js",
       "bower_components/rsvp/rsvp.min.js",
@@ -93,9 +94,11 @@ gulp.task("scripts", function() {
 
 /* Uses the Karma test runner to run the Jasmine tests */
 gulp.task("test", function() {
+  var configFile = paths.tests.config;
+  if (travis) configFile = paths.tests.travisConfig;
   return gulp.src(paths.tests.files)
     .pipe(karma({
-      configFile: paths.tests.config,
+      configFile: configFile,
       action: "run"
     }))
     .on("error", function(error) {
